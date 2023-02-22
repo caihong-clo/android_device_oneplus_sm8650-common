@@ -350,6 +350,9 @@ TARGET_COMMON_QTI_COMPONENTS += \
     telephony
 endif
 
+# SMMU
+TARGET_USES_SMMU_PROXY := true
+
 # SecureElement
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
