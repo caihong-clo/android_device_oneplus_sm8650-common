@@ -21,6 +21,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.aospa.rc",
+    src: "init.aospa.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.oplus.rc",
     src: "init.oplus.rc",
     sub_dir: "init",
