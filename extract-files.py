@@ -88,6 +88,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
+    'vendor/bin/init.qti.kernel.sh': blob_fixup()
+        .regex_replace(r'\nstart_msm_irqbalance\n', '\n'),
     'vendor/bin/init.kernel.post_boot-memory.sh': blob_fixup()
         .regex_replace('# echo always', 'echo always'),
     'vendor/bin/system_dlkm_modprobe.sh': blob_fixup()
