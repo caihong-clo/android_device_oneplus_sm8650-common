@@ -87,10 +87,6 @@ PRODUCT_PACKAGES += \
     lib_bt_ble \
     lib_bt_bundle
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
-
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
@@ -130,9 +126,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
     vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.display.demura-V1-ndk.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Doze
 ifneq ($(TARGET_IS_TABLET),true)
