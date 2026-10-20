@@ -53,9 +53,9 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.pineapple
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/pineapple
-CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../pal/configs/pineapple
+CONFIG_PAL_SRC_DIR := vendor/qcom/opensource/pal/configs/pineapple
 QCV_FAMILY_SKUS := pineapple cliffs
 
 PRODUCT_COPY_FILES += \
