@@ -288,7 +288,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.performance-service
 
 # Overlays
-$(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
+$(call inherit-product, hardware/oplus/overlay/overlay.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
