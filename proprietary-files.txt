@@ -537,10 +537,6 @@ vendor/etc/smomo_setting.xml
 vendor/lib64/libqape_oem_ext.so
 vendor/lib64/libreffeature.so
 
-# PSI Client
-vendor/bin/hw/vendor.qti.psiclient@1.0-service
-vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-
 
 # QCC
 vendor/bin/qcc-vendor
