@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.3-impl \
-    audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
     libagm_compress_plugin \
@@ -82,7 +81,6 @@ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle
