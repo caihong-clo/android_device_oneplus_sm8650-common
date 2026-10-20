@@ -21,3 +21,11 @@ ro.vendor.oplus.radio.sar_regionmark=FCC
 
 # SVN
 ro.build.version.svn=56
+
+# Overrides for values the QTI display component also sets in vendor
+persist.sys.sf.color_mode=0
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.enable_hdr10_gpu_target=0
+debug.graphics.game_default_frame_rate.disabled=0
+debug.sf.disable_client_composition_cache=1
+debug.sf.enable_gl_backpressure=0
