@@ -214,6 +214,11 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+# UFS
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
