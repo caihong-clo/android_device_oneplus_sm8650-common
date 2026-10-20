@@ -20,11 +20,14 @@ from extract_utils.main import (
 namespace_imports = [
     'device/oneplus/sm8650-common',
     'hardware/oplus',
-    'hardware/qcom-caf/sm8650',
-    'hardware/qcom-caf/wlan',
-    'vendor/qcom/opensource/commonsys/display',
-    'vendor/qcom/opensource/commonsys-intf/display',
-    'vendor/qcom/opensource/dataservices',
+    'hardware/qcom/wlan/qcwcn',
+    'vendor/qcom/common/system/av',
+    'vendor/qcom/common/system/display',
+    'vendor/qcom/common/system/perf',
+    'vendor/qcom/common/system/wfd',
+    'vendor/qcom/common/vendor/alarm',
+    'vendor/qcom/common/vendor/perf',
+    'vendor/qcom/common/vendor/wlan',
 ]
 
 
