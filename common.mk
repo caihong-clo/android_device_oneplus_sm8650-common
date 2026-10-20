@@ -3,9 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
-
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
@@ -502,7 +499,6 @@ DEVICE_MANIFEST_FILE := \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
     $(LOCAL_PATH)/vintf/manifest_pineapple.xml
-DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 ifneq ($(TARGET_IS_TABLET),true)
 DEVICE_MANIFEST_FILE += \
