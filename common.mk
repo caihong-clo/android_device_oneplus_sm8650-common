@@ -330,7 +330,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
-    gps \
     overlay \
     perf \
     usb \
@@ -339,6 +338,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
 
 ifneq ($(TARGET_IS_TABLET),true)
 TARGET_COMMON_QTI_COMPONENTS += \
+    gps \
     telephony
 else
 # CneApp from the phone list requires the CNE symlink defined there
