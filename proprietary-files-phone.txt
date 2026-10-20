@@ -176,7 +176,7 @@ vendor/bin/engine-service
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mlid
-vendor/bin/qsap_location
+# vendor/bin/qsap_location (phone-only, not in the OPD2403 dump)
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
@@ -185,7 +185,7 @@ vendor/etc/init/loc-launcher.rc
 vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
-vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
+# vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy (phone-only, not in the OPD2403 dump)
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
@@ -404,7 +404,7 @@ vendor/lib64/libqcrildataaidl.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdpr.so
-vendor/lib64/libqms.so
+# vendor/lib64/libqms.so (phone-only, not in the OPD2403 dump)
 vendor/lib64/libqms_client.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
