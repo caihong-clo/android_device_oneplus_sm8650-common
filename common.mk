@@ -327,9 +327,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     qspa_vendor.rc \
     vendor.qti.qspa-service
+
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
-
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \

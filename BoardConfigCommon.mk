@@ -55,6 +55,9 @@ BOARD_RAMDISK_USE_LZ4 := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := pineapple
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
@@ -213,11 +216,11 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+
 # UFS
 SOONG_CONFIG_NAMESPACES += ufsbsg
 SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
-
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
