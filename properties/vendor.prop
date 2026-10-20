@@ -264,6 +264,7 @@ ro.incremental.enable=yes
 ro.hardware.keystore_desede=true
 
 # Media
+ro.mediaserver.64b.enable=true
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 vendor.media.omx=0
