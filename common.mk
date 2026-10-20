@@ -341,6 +341,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
 ifneq ($(TARGET_IS_TABLET),true)
 TARGET_COMMON_QTI_COMPONENTS += \
     telephony
+else
+# CneApp from the phone list requires the CNE symlink defined there
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/vendor/telephony
 endif
 
 # SMMU
