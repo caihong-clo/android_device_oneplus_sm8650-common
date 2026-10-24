@@ -332,6 +332,9 @@ PRODUCT_PACKAGES += \
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
 
+# Kernel (built from source, not from the device/qcom/$(TARGET_BOARD_PLATFORM)-kernel prebuilts)
+TARGET_USES_KERNEL_PLATFORM := false
+
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
