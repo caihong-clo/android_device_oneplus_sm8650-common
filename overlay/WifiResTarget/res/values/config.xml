@@ -29,4 +29,17 @@
     <!-- Enable concurrent restricted connectivity + internet connectivity
          Note: this is conditional on the device supporting dual concurrent STAs. -->
     <bool name="config_wifiMultiStaRestrictedConcurrencyEnabled">true</bool>
+
+    <!-- Enable concurrent internet connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool name="config_wifiMultiStaMultiInternetConcurrencyEnabled">true</bool>
+
+    <!-- Wifi driver supports OCV for softap -->
+    <bool name="config_vendor_softap_ocv_supported">true</bool>
+
+    <!-- Wifi driver supports beacon protection for softap -->
+    <bool name="config_vendor_softap_beacon_protection_supported">true</bool>
+
+    <!-- Enable connected frequency enhancement for pno scan -->
+    <bool name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
 </resources>
