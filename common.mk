@@ -52,6 +52,9 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.pineapple
 
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/audio-hal/st-hal-ar
+
 AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/pineapple
 CONFIG_PAL_SRC_DIR := vendor/qcom/opensource/pal/configs/pineapple
