@@ -84,12 +84,6 @@ vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.latency@2.2.so
 vendor/lib64/vendor.qti.latencyaidlservice-V1-ndk.so
 
-# Context Hub
-odm/etc/init/android.hardware.contexthub-service.qmi.rc
-odm/etc/vintf/manifest/android.hardware.contexthub-service.qmi.xml
-vendor/bin/hw/android.hardware.contexthub-service.qmi
-vendor/etc/chre/preloaded_nanoapps.json
-
 # Data
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
