@@ -208,6 +208,12 @@ vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libtaautoload.so
 
+# Context Hub
+odm/etc/init/android.hardware.contexthub-service.qmi.rc
+odm/etc/vintf/manifest/android.hardware.contexthub-service.qmi.xml
+vendor/bin/hw/android.hardware.contexthub-service.qmi
+vendor/etc/chre/preloaded_nanoapps.json
+
 # Diag
 system/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/lib64/libdiag_system.so
