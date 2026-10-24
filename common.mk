@@ -55,6 +55,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/audio-hal/st-hal-ar
 
+# PAL and the primary HAL headers live in the root namespace
+$(call soong_config_set,qtiaudio,headers_namespace,.)
+$(call soong_config_set,qtiaudio,libarpal_namespace,.)
+
 AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/pineapple
 CONFIG_PAL_SRC_DIR := vendor/qcom/opensource/pal/configs/pineapple
