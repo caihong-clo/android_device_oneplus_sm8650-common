@@ -27,7 +27,7 @@ persist.sys.sf.color_mode=0
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.enable_hdr10_gpu_target=0
 debug.graphics.game_default_frame_rate.disabled=0
-debug.sf.disable_client_composition_cache=1
+debug.sf.disable_client_composition_cache?=1
 debug.sf.enable_gl_backpressure=0
 
 # The stock OnePlus composer predates the newer slot-clearing handshake QTI's defaults turn on
