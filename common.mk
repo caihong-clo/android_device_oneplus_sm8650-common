@@ -214,7 +214,7 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 # The IPA UAPI headers live in the dataipa techpack, not in the kernel-platform
 # kernel headers; the IPA userspace finds them through qti_kernel_headers.
 PRODUCT_VENDOR_KERNEL_HEADERS += \
-    vendor/qcom/opensource/dataipa/drivers/platform/msm/include/uapi
+    vendor/qcom/opensource/dataipa/kernel-headers
 
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
