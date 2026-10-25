@@ -801,6 +801,14 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000,0xFFF, 0x40800100,0xFFF, 0x40800200,0xFFF" />
 
+    <!-- Expensive rendering hint -->
+        <!-- SurfaceFlinger raises it while it composites blur on the GPU. Without a floor, -->
+        <!-- transitions start from the idle GPU clock and miss frames at high refresh rates. -->
+        <!-- GPU MIN_FREQUENCY resource opcode, value in MHz -->
+        <Config
+            Id="0x000010A5" Enable="true" Timeout="5000" Target="pineapple"
+            Resources="0x4280C000, 680" />
+
     <!--Rotation animation boost-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- GPU MIN_FREQUENCY resource opcode,value-->
