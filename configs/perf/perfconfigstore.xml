@@ -113,5 +113,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_limit"               Value="5"      Ram="4"        Target="cliffs"/>
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"              Value="true"                  Target="cliffs"/>
 
+                <Prop Name="vendor.perf.expensive_rendering" Value="1" />
+
     </PerfConfigs>
 </PerfConfigsStore>
