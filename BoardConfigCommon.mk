@@ -104,6 +104,23 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat \
     kernel_platform/msm-kernel/modules.vendor_dlkm.list.msm.pineapple \
     kernel_platform/msm-kernel/modules.vendor_dlkm.list.oplus.pineapple))
 
+# The WLAN techpack modules are installed as packages, so they are missing
+# from BOARD_VENDOR_KERNEL_MODULES and from the modules.dep that depmod
+# writes for vendor_dlkm, and modprobe cannot load them. CLO targets add
+# them with device/qcom/wlan BoardConfigWlan.mk, which this board does not
+# include.
+BOARD_VENDOR_KERNEL_MODULES += $(addprefix $(KERNEL_MODULES_OUT)/, \
+    cnss2.ko \
+    cnss_nl.ko \
+    cnss_plat_ipc_qmi_svc.ko \
+    cnss_prealloc.ko \
+    cnss_utils.ko \
+    icnss2.ko \
+    qca_cld3_kiwi_v2.ko \
+    qca_cld3_peach.ko \
+    qca_cld3_qca6750.ko \
+    wlan_firmware_service.ko)
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
