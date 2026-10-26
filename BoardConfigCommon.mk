@@ -121,6 +121,24 @@ BOARD_VENDOR_KERNEL_MODULES += $(addprefix $(KERNEL_MODULES_OUT)/, \
     qca_cld3_qca6750.ko \
     wlan_firmware_service.ko)
 
+# Without this the kernel_platform flow makes recovery load every first and
+# second stage module, and recovery hangs at the boot logo before USB is up.
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat \
+    kernel_platform/msm-kernel/modules.recovery.list.msm.pineapple \
+    kernel_platform/msm-kernel/modules.recovery.list.oplus.pineapple))
+
+# The recovery list loads these audio techpack modules from the vendor
+# ramdisk, but they are not vendor ramdisk modules, so depmod leaves them out
+# of its modules.dep. First stage init then fails to load them and reboots,
+# and recovery boot loops.
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(addprefix $(KERNEL_MODULES_OUT)/, \
+    adsp_loader_dlkm.ko \
+    gpr_dlkm.ko \
+    q6_notifier_dlkm.ko \
+    q6_pdr_dlkm.ko \
+    snd_event_dlkm.ko \
+    spf_core_dlkm.ko)
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
