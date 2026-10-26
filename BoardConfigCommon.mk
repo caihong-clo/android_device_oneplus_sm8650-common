@@ -95,6 +95,15 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
+# Kernel modules
+# Without a load list the build loads every module of
+# BOARD_VENDOR_KERNEL_MODULES, which leaves out the techpack modules that
+# are installed as packages (WLAN). Load the kernel source's second stage
+# lists instead.
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat \
+    kernel_platform/msm-kernel/modules.vendor_dlkm.list.msm.pineapple \
+    kernel_platform/msm-kernel/modules.vendor_dlkm.list.oplus.pineapple))
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
