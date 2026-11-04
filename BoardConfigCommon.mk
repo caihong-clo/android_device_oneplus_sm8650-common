@@ -177,7 +177,13 @@ BOOT_SECURITY_PATCH := 2026-09-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
+TARGET_EXCLUDE_QCOM_SEPOLICY := true
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/common/sepolicy/SEPolicy.mk
+QCOM_SEPOLICY_PATH := $(SEPOLICY_PATH)
+SEPOLICY_PATH :=
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+SEPOLICY_PATH := $(QCOM_SEPOLICY_PATH)
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # UFS
