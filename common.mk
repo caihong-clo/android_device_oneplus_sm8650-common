@@ -211,6 +211,9 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
 # IPACM
+PRODUCT_VENDOR_KERNEL_HEADERS += \
+    vendor/qcom/opensource/dataipa/kernel-headers
+
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     ipacm \
@@ -228,10 +231,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
 endif
-
-# Kernel
-PRODUCT_COPY_FILES += \
-    kernel/oneplus/sm8650/modules.systemdlkm_blocklist.msm.pineapple:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -331,9 +330,6 @@ PRODUCT_PACKAGES += \
 
 # Platform
 TARGET_BOARD_PLATFORM := pineapple
-
-# Kernel (built from source, not from the device/qcom/$(TARGET_BOARD_PLATFORM)-kernel prebuilts)
-TARGET_USES_KERNEL_PLATFORM := false
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
