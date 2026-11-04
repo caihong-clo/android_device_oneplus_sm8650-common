@@ -140,6 +140,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # DRM
+PRODUCT_PACKAGES += duck_rkp
+
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
