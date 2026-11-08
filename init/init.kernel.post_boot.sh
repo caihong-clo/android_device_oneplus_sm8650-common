@@ -116,6 +116,9 @@ function configure_memory_parameters() {
 	# huge pages is not as necessary.
 	echo 0 > /proc/sys/vm/compaction_proactiveness
 
+	# Do not boost kswapd reclaim after fragmentation events
+	echo 0 > /proc/sys/vm/watermark_boost_factor
+
 	## Goal is to allow all allocations to use THP whilst minimizing allocaiton delays
 	# Allowing all eligibe page faults to use THP is set in the respective soc specific file
 	echo never > /sys/kernel/mm/transparent_hugepage/enabled
