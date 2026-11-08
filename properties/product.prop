@@ -15,3 +15,7 @@ ro.opa.device_model_id=ga-oplus-skill-os121-211011
 # RKP
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+# LMK
+ro.lmk.relaxed_available_memory=true
+ro.lmk.swap_compression_ratio=2
