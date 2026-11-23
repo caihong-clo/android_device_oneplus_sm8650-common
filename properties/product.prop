@@ -19,3 +19,10 @@ remote_provisioning.hostname=remoteprovisioning.googleapis.com
 # LMK
 ro.lmk.relaxed_available_memory=true
 ro.lmk.swap_compression_ratio=2
+
+# Boot: replay the page cache recorded on an earlier boot (prefetch, Rust)
+ro.prefetch_boot.enabled=true
+
+# Text: read fonts with Fontations (Skrifa, Rust) instead of FreeType.
+# Back to FreeType at runtime: setprop debug.hwui.text.backend 1
+debug.hwui.text.backend=2
