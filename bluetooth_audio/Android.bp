@@ -1,0 +1,44 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// The AOSP Bluetooth audio stream (software A2DP, used for audio sharing),
+// built against the QTI session library: the registered provider is the QTI
+// one, which keeps its sessions there, so the AOSP library never sees them.
+// Interface V3 is the version the QTI blobs are built against. AIDL only:
+// the AOSP HIDL session library would load the AOSP AIDL one as well.
+cc_library_shared {
+    name: "audio.bluetooth_qti.default",
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [":audio_bluetooth_hw_aidl_srcs"],
+    // The V3 copy of BluetoothAudioSessionControl.h comes before the AOSP one.
+    local_include_dirs: ["include"],
+    include_dirs: [
+        "packages/modules/Bluetooth/system/audio_bluetooth_hw",
+        "hardware/interfaces/bluetooth/audio/utils/aidl_session",
+    ],
+    header_libs: ["libhardware_headers"],
+    cflags: [
+        "-DBLUETOOTH_AUDIO_HW_AIDL_ONLY",
+        "-Wall",
+        "-Werror",
+        "-Wextra",
+        "-Wno-sign-compare",
+        "-Wthread-safety",
+    ],
+    cpp_std: "c++20",
+    shared_libs: [
+        "android.hardware.bluetooth.audio-V3-ndk",
+        "libaudioutils",
+        "libbase",
+        "libbinder_ndk",
+        "//vendor/oneplus/sm8650-common:libbluetooth_audio_session_aidl_qti",
+        "libcutils",
+        "libfmq",
+        "liblog",
+        "libutils",
+        "vendor.qti.hardware.bluetooth.audio-V1-ndk",
+    ],
+}

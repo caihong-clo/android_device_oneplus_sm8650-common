@@ -541,6 +541,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
         <!-- Remote Submix Audio HAL -->
         <xi:include href="/vendor/etc/r_submix_audio_policy_configuration.xml"/>
+        <!-- Software A2DP: audio sharing encodes on the host and hands over PCM -->
+        <xi:include href="/vendor/etc/bluetooth_qti_audio_policy_configuration.xml"/>
 
     </modules>
     <!-- End of Modules section -->
